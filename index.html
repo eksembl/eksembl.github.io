@@ -9,54 +9,12 @@
     <link rel="shortcut icon" href="assets/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
     <link rel="manifest" href="assets/site.webmanifest" />
-    <title>Trust project</title>
+    <title>Eksembl</title>
 </head>
 <body>
-    <div class="ava">
-        <img src="assets/ava.webp" alt="Аватар Eksembl" loading="lazy">
-    </div>
-    <h1>Eksembl</h1>
-
-    <div class="container">
-        <a href="https://t.me/somka1337" target="_blank" rel="noopener noreferrer" aria-label="Мой Telegram">
-            <img src="assets/icon/telegram.svg" alt="" width="50" height="50">
-        </a>
-        <a href="https://discord.gg/ka4fBvYKtW" target="_blank" rel="noopener noreferrer" aria-label="Мой Discord-сервер">
-            <img src="assets/icon/discord.svg" alt="" width="50" height="50">
-        </a>
-        <a href="https://github.com/eksembl" target="_blank" rel="noopener noreferrer" aria-label="Мой GitHub">
-            <img src="assets/icon/github.svg" alt="" width="50" height="50">
-        </a>
-    </div>
-
-    <h2 class="typewriter">Full-stack · SOC Analyst · Open-source believer</h2>
-
-    <p class="mission">
-        The code and knowledge are open. Use. Improve. Share.
-    </p>
-
-
-    <script>
-        (function() {
-            const titleText = "Trust project";
-            let i = 0;
-            
-            function typeTitle() {
-                if (i < titleText.length) {
-                    document.title = titleText.substring(0, i + 1);
-                    i++;
-                    setTimeout(typeTitle, 200);
-                } else {
-                    document.title = titleText;
-                }
-            }
-            
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', typeTitle);
-            } else {
-                typeTitle();
-            }
-        })();
-    </script>
+    <nav class="nav">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+    </nav>
 </body>
 </html>

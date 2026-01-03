@@ -33,6 +33,80 @@ h1 {
     text-shadow: 0 0 8px #ffffff33;
 }
 
+/* Навигация - фиксированная сверху */
+.nav {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 2rem;
+    background: rgba(26, 29, 26, 0.85);
+    backdrop-filter: blur(15px);
+    border-radius: 50px;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(90, 170, 90, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    z-index: 100;
+    border: 1px solid rgba(58, 74, 58, 0.3);
+}
+
+.nav-link {
+    color: #d0d0d0;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    position: relative;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 30px;
+    background: linear-gradient(135deg, rgba(90, 170, 90, 0.15), rgba(58, 74, 58, 0.15));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.nav-link:hover::before {
+    opacity: 1;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+    text-shadow: 0 0 15px rgba(90, 170, 90, 0.6);
+}
+
+.nav-link.active {
+    background: linear-gradient(135deg, rgba(90, 170, 90, 0.2), rgba(58, 74, 58, 0.2));
+    color: #5aaa5a;
+    text-shadow: 0 0 10px rgba(90, 170, 90, 0.4);
+    box-shadow: 
+        0 0 20px rgba(90, 170, 90, 0.15),
+        inset 0 1px 0 rgba(90, 170, 90, 0.1);
+}
+
+.nav-link:focus {
+    outline: 2px solid #5aaa5a;
+    outline-offset: 4px;
+}
+
+/* Контент страницы About */
+.about-content {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .ava {
     animation: float 8s ease-in-out infinite;
 }
@@ -137,6 +211,16 @@ a:focus {
         height: 200px;
     }
     
+    .nav {
+        gap: 1.5rem;
+        padding: 0.7rem 1.2rem;
+    }
+    
+    .nav-link {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
     .typewriter {
         font-size: 1rem;
     }
@@ -161,8 +245,23 @@ a:focus {
         height: 150px;
     }
     
+    .nav {
+        gap: 1rem;
+        padding: 0.6rem 1rem;
+        top: 10px;
+    }
+    
+    .nav-link {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.7rem;
+    }
+    
     .typewriter {
         font-size: 0.9rem;
+    }
+    
+    .about-content {
+        margin-top: 80px;
     }
 }
 
